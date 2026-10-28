@@ -1,0 +1,16 @@
+def pluck(arr):
+    if not arr:
+        return []
+
+    smallest_even = float('inf')
+    index = -1
+
+    for i, value in enumerate(arr):
+        if value % 2 == 0 and value < smallest_even:
+            smallest_even = value
+            index = i
+
+    if index == -1:
+        return []
+
+    return [smallest_even, index]
